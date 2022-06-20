@@ -152,7 +152,7 @@ def main():
         parallel
       )
 
-    post_struct, post_count, post_phi, post_llh, post_prob = tree_sampler.compute_posterior(
+    post_struct, post_count, post_phi, post_llh, post_prob, post_adjm = tree_sampler.compute_posterior( #post_adjm added AH 6/20/22
       adjm,
       phi,
       llh,
@@ -160,6 +160,7 @@ def main():
     )
     results.add('struct', post_struct)
     results.add('count', post_count)
+    results.add('adjm', post_adjm) #added AH 6/20/22
     results.add('phi', post_phi)
     results.add('llh', post_llh)
     results.add('prob', post_prob)

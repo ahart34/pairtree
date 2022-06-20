@@ -701,6 +701,7 @@ def compute_posterior(adjms, phis, llhs, sort_by_llh=True):
         'phi': P,
         'llh': L,
         'count': 1,
+        'adjm': A #added 6/20/22 AH
       }
 
   if sort_by_llh:
@@ -716,4 +717,5 @@ def compute_posterior(adjms, phis, llhs, sort_by_llh=True):
     unzipped['phi'],
     unzipped['llh'],
     unzipped['prob'],
+    unzipped['adjm']
   )
